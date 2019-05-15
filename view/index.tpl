@@ -32,9 +32,9 @@
 			<tbody>
 				<?php foreach ($users as $user) { ?>
 					<tr class="text-center">
-						<th scope="row"><?=$user->id?></th>
-						<td><?=$user->name?></td>
-						<td><?=$user->secondname?></td>
+						<th scope="row"><?=$user['id']?></th>
+						<td><?=$user['name']?></td>
+						<td><?=$user['secondname']?></td>
 						<td><a href="?action=delete&id=<?=$user->id?>" class="btn btn-outline-danger">Удалить</a></td>
 					</tr>
 				<?php } ?>

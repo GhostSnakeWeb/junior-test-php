@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 14 2019 г., 12:10
+-- Время создания: Май 15 2019 г., 12:01
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.5.38
 
@@ -31,20 +31,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
-  `secondname` text NOT NULL
+  `secondname` text NOT NULL,
+  `addtime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `secondname`) VALUES
-(5, 'Михаил', 'Салтыков-Щедрин'),
-(10, 'Михаил', 'Крыжовников'),
-(12, 'Николай', 'Рено'),
-(13, 'Николай', 'Вишня'),
-(14, 'Василий', 'Гречка'),
-(15, 'Леон', 'Торвальдс');
+INSERT INTO `users` (`id`, `name`, `secondname`, `addtime`) VALUES
+(36, 'Виталий', 'Гоголь', '2019-05-15 08:00:42'),
+(38, 'Виталий', 'Казаков', '2019-05-15 00:00:00'),
+(40, 'Антон', 'Рено', '2019-05-16 00:00:00'),
+(43, 'Федор', 'Казаков', '1970-01-02 03:01:38'),
+(49, 'Микола', 'Романов', '2019-05-15 10:40:04');
 
 --
 -- Индексы сохранённых таблиц
@@ -64,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
